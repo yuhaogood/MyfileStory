@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="aspectjrt-1.5.3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/aspectjrt-1.5.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/aspectjweaver-1.8.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/spring-aop-4.3.7.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/spring-aspects-4.3.7.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/spring-beans-4.3.7.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/spring-context-4.3.7.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/spring-context-support-4.3.7.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/spring-core-4.3.7.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/spring-expression-4.3.7.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

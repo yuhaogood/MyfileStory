@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean class="org.sang.a3.MyCalculateImpl" name="calculate"/>
+    <bean class="org.sang.a3.XMLAdvice" name="xmlAdvice"/>
+  <!--  <aop:config>
+        <aop:pointcut id="p1" expression="execution(* org.sang.a3.MyCalculateImpl.*(..))"/>
+        <aop:aspect ref="xmlAdvice">
+            &lt;!&ndash;<aop:before method="before1" pointcut="execution(* org.sang.a3.MyCalculateImpl.*(..))"/>&ndash;&gt;
+            &lt;!&ndash;<aop:after method="after1" pointcut-ref="p1"/>&ndash;&gt;
+            &lt;!&ndash;<aop:after-returning returning="result" method="return1" pointcut-ref="p1"/>&ndash;&gt;
+            &lt;!&ndash;<aop:after-throwing method="throwing1" pointcut-ref="p1" throwing="e"/>&ndash;&gt;
+            <aop:around method="around1" pointcut-ref="p1"></aop:around>
+        </aop:aspect>
+    </aop:config>-->
+    <bean class="org.sang.a4.HaoAdvice" name="haoAdvice"/>
+    <bean class="org.sang.a4.HaoPlay" name="haoPlay"/>
+    <aop:config>
+        <aop:pointcut id="p2" expression="execution(* org.sang.a4.HaoPlay.*(..))|| execution(* org.sang.a3.MyCalculateImpl.*(..))" />
+        <aop:aspect ref="haoAdvice">
+            <aop:around method="aroundHao" pointcut-ref="p2"/>
+        </aop:aspect>
+    </aop:config>
+</beans>
